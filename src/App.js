@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './components/Header/Header';
+import MainPage from './components/MainPage/Mainpage'
+import useStyles from './styles'
+import SideBar from './components/SideBar/Sidebar';
+import { CssBaseline, Divider, Grid, Typography } from '@material-ui/core';
 
-function App() {
+const App = () => {
+  const classes = useStyles()
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+   <div>
+    <CssBaseline/>
+      <Grid container spacing={5}>
+        <Grid item xs={12} md={2} style={{background:'black'}}>
+          <SideBar/>
+        </Grid>
+        <Grid item xs={12} md={10} style={{background:'blue'}}>
+          <Typography>How are you?</Typography>
+        </Grid>
+      </Grid>
+   </div>
+    
+  )
+};
 
-export default App;
+export default App
