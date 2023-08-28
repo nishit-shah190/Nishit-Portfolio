@@ -1,8 +1,11 @@
 import React from 'react';
+import { useState } from 'react';
 import {CssBaseline, Drawer, Hidden, IconButton, List, ListItem,  ListItemText, Toolbar, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import useStyles from './styles';
 import { useTheme } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
+
 
 
 const SideBar = (props) => {
@@ -14,20 +17,37 @@ const SideBar = (props) => {
     const handleDrawerToggle = () => {
       setMobileOpen(!mobileOpen);
     };
+    const [isHovered, setisHovered] = useState(null);
+  
+  const handleMouseEnter = (index) => {
+    setisHovered(index);
+  };
+
+  const handleMouseLeave = () => {
+    setisHovered(null);
+  }
+  const textColor = isHovered? 'blue' : 'white'
   const drawer = (
       <List  className={classes.toolbar}>
-        {['About Me', 'Skills', 'Projects', 'Contact'].map((text, index) => (
+        {['About Me', 'Resume', 'Projects', 'Contact'].map((text, index) => (
           <ListItem button key={text} >
-              <ListItemText primary = {
-              <Typography variant="h5" className={classes.sidebarItem} color="primary">
-                {text}
-              </Typography>} />
+              <Link
+                  to={`/${text.toLowerCase().replace(/\s+/g,'-')}`}
+                  className={`${classes.sidebarItem} ${
+                    isHovered  === index ? classes.hovered : ''}`
+                  }
+                  style = {{color: isHovered === index ? '#03a9f4' : 'white' , textDecoration:'none'}}
+                  // onClick={handleClick} 
+                  onMouseLeave={handleMouseLeave}
+                  onMouseEnter={() => handleMouseEnter(index)}>
+                  <ListItemText primary = {<Typography variant="h4">{text}</Typography>}/>
+              </Link>
           </ListItem>
         ))}
       </List>
       
   );
-
+  
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
@@ -44,7 +64,7 @@ const SideBar = (props) => {
             <MenuIcon />
           </IconButton>
         </Toolbar>
-      {/* <nav className={classes.drawer} aria-label="mailbox folders"> */}
+      <nav className={classes.drawer} aria-label="mailbox folders">
         <Hidden smUp implementation="css">
           <Drawer
             container={container}
@@ -73,13 +93,11 @@ const SideBar = (props) => {
             {drawer}
           </Drawer>
         </Hidden>
-      {/* </nav> */}
-      {/* <main className={classes.content}>
+      </nav>
+      <main className={classes.content}>
         <div className={classes.toolbar} />
-      </main> */}
+      </main>
    </div>
   );
 }
-
-
-export default SideBar;
+export default SideBar
