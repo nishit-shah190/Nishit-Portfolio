@@ -5,6 +5,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import useStyles from './styles';
 import { useTheme } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
+import sideBarImage from './images/Screenshot 2023-09-02 at 11.04.38 PM.png'
 
 
 
@@ -13,6 +14,7 @@ const SideBar = (props) => {
     const classes = useStyles();
     const theme = useTheme();
     const [mobileOpen, setMobileOpen] = React.useState(false);
+    
   
     const handleDrawerToggle = () => {
       setMobileOpen(!mobileOpen);
@@ -27,26 +29,36 @@ const SideBar = (props) => {
     setisHovered(null);
   }
   const textColor = isHovered? 'blue' : 'white'
+  const sidebar =(
+    
+    <img  className={classes.sidebarimage} src={sideBarImage} alt="SideBar" />
+  );
   const drawer = (
+    <div>
+      {sidebar} 
+      <Typography variant="h4" className={classes.name} >Nishit Shah</Typography>
+
+
       <List  className={classes.toolbar}>
         {['About Me', 'Resume', 'Projects', 'Contact'].map((text, index) => (
           <ListItem button key={text} >
               <Link
-                  to={`/${text.toLowerCase().replace(/\s+/g,'-')}`}
+                  to={`/${text.toLowerCase().replace(/\s+/g,'')}`}
                   className={`${classes.sidebarItem} ${
                     isHovered  === index ? classes.hovered : ''}`
                   }
-                  style = {{color: isHovered === index ? '#03a9f4' : 'white' , textDecoration:'none'}}
+                  style = {{color: isHovered === index ? '#c3eafd' : 'white' , textDecoration:'none'}}
                   // onClick={handleClick} 
                   onMouseLeave={handleMouseLeave}
                   onMouseEnter={() => handleMouseEnter(index)}>
-                  <ListItemText primary = {<Typography variant="h4">{text}</Typography>}/>
+                  <ListItemText primary = {<Typography variant="h4" className={classes.font}>{text}</Typography>}/>
               </Link>
           </ListItem>
         ))}
       </List>
-      
+    </div> 
   );
+  
   
   const container = window !== undefined ? () => window().document.body : undefined;
 
@@ -55,7 +67,7 @@ const SideBar = (props) => {
       <CssBaseline />
         <Toolbar>
           <IconButton
-            color="inherit"
+            color="#fff"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}

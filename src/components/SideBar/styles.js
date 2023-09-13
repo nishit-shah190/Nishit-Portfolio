@@ -1,6 +1,6 @@
 import { makeStyles, useTheme, alpha } from '@material-ui/core/styles';
 
-const drawerWidth = 295;
+const drawerWidth = 250;
 
 export default makeStyles((theme) => ({
   root: {
@@ -22,16 +22,21 @@ export default makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
   toolbar:{
     margin:'auto',
-    // display:'flex',
-    // flexDirection: 'column',
-    // alignItems: 'center',
+    display:'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
     
+  },
+  font:{
+    fontFamily: 'Domine',
+    fontSize:'30px'
   },
   sidebarItem :{
     marginTop:'10px',
     display:'flex',
     justifyContent:'center',
-    fontFamily:'Helvetica ',
+    fontFamily: 'Domine', 
+    marginLeft:'40px',   
     color:'white',
     position: ' relative',
     transition: 'transform 0.3s', '&:hover': {
@@ -57,5 +62,17 @@ export default makeStyles((theme) => ({
     // height:'350px',
     background:'black'
   },
+  sidebarimage:{
+    marginTop:'25px',
+    marginLeft:'40px',
+    height:'150px',
+    width:'150px'
+  },
+  name:{
+    color:'white',
+    margin:'1px 0 50px 30px',
+    fontWeight:'bold',
+    
+  }
 }));
 

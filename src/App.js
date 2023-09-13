@@ -15,22 +15,23 @@ const App = () => {
    <div>
     <CssBaseline/> 
     <Router>
-      <SideBar/>
-      <Switch>
-        <Route path="/AboutMe/AboutMe" component={AboutMe}/>
-        <Route path="/Resume/resume" component={Resume}/>
-        <Route path="/Project/project" component={Project}/>
-        <Route path="/Contact/contact" component={Contact}/>
-      </Switch>
+      <Grid container spacing={1} style={{  background : '#151414' , minHeight: '100vh' }}>
+        <Grid item lg={2} md={3}>
+          <SideBar/>
+        </Grid>
+        <Grid item lg={10} md={9}>
+          <Switch>
+            <Route exact path="/" component={AboutMe}/>
+            <Route path="/AboutMe" component={AboutMe}/>
+            <Route path="/resume" component={Resume}/>
+            <Route path="/project" component={Project}/>
+            <Route path="/contact" component={Contact}/>
+          </Switch>
+        </Grid>
+      </Grid>     
       </Router>
-        <Grid container spacing={1}> 
-          <Grid item xs={12}  style={{  background : '#212121' , minHeight: '100vh' }}>
-              {/* Main content */}
-          </Grid>
-          {/* <Grid item xs={12} lg={2}style={{background:'black', minHeight:'100vh'}}> */}
-        </Grid> 
+  
        
-       {/* </Grid>  */}
    </div>
     
   )
