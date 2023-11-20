@@ -4,7 +4,7 @@ import {CssBaseline, Drawer, Hidden, IconButton, List, ListItem,  ListItemText, 
 import MenuIcon from '@material-ui/icons/Menu';
 import useStyles from './styles';
 import { useTheme } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
+import { Link  } from 'react-router-dom';
 import sideBarImage from './images/Screenshot 2023-09-02 at 11.04.38 PM.png'
 
 
@@ -19,6 +19,7 @@ const SideBar = (props) => {
     const handleDrawerToggle = () => {
       setMobileOpen(!mobileOpen);
     };
+    
     const [isHovered, setisHovered] = useState(null);
   
   const handleMouseEnter = (index) => {
@@ -40,7 +41,7 @@ const SideBar = (props) => {
 
 
       <List  className={classes.toolbar}>
-        {['About Me', 'Resume', 'Projects', 'Contact'].map((text, index) => (
+        {['About Me', 'Resume','Projects', 'Contact'].map((text, index) => (
           <ListItem button key={text} >
               <Link
                   to={`/${text.toLowerCase().replace(/\s+/g,'')}`}
@@ -50,7 +51,8 @@ const SideBar = (props) => {
                   style = {{color: isHovered === index ? '#c3eafd' : 'white' , textDecoration:'none'}}
                   // onClick={handleClick} 
                   onMouseLeave={handleMouseLeave}
-                  onMouseEnter={() => handleMouseEnter(index)}>
+                  onMouseEnter={() => {handleMouseEnter(index)}}
+                  >
                   <ListItemText primary = {<Typography variant="h4" className={classes.font}>{text}</Typography>}/>
               </Link>
           </ListItem>
@@ -67,7 +69,6 @@ const SideBar = (props) => {
       <CssBaseline />
         <Toolbar>
           <IconButton
-            color="#fff"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}

@@ -24,7 +24,7 @@ const App = () => {
             <Route exact path="/" component={AboutMe}/>
             <Route path="/AboutMe" component={AboutMe}/>
             <Route path="/resume" component={Resume}/>
-            <Route path="/project" component={Project}/>
+            <Route path="/projects" component={Project}/>
             <Route path="/contact" component={Contact}/>
           </Switch>
         </Grid>

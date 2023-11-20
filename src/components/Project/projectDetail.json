@@ -1,0 +1,23 @@
+[
+    {
+       "title": "Wanderer",
+       "description":"A web app with Google Maps integration for seamless global exploration using location-based search for an engaging travel experience and pinpointing hospitalities on global-scale.",
+       "image":"/images/Wanderer.png",
+       "techused":["React.js", "Google Maps React", "API", "Material UI"],
+       "githublink":"https://github.com/nishit-shah190/Wanderer"
+    },
+    {
+        "title": "PixelShare",
+        "description":"A secure MERN stack social media app with advanced authentication features, including password hashing and encryption, enabling users to create, share, and engage with posts.",
+        "image":"../images/PixelShare.png",
+        "techused":["React.js", "Node.js", "API", "Material UI", "Bcrypt", "Redux", "MongoDB"],
+        "githublink":"https://github.com/nishit-shah190/PixelShare"
+    },
+    {
+        "title": "Blog Here",
+        "description":"A web application that enables users to publish blogs within their chosen interest categories and incorporating a commenting feature, fostering meaningful discussions.",
+        "image":"../images/BlogHere.png",
+        "techused":["Next.js", "GraphQL"],
+        "githublink":"https://github.com/nishit-shah190/Blog-Here"
+    }
+]

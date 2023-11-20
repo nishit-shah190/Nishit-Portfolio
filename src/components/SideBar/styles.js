@@ -17,6 +17,7 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       display: 'none',
     },
+    color:'#c3eafd'
   },
   // necessary for content to be below app bar
   toolbar: theme.mixins.toolbar,
