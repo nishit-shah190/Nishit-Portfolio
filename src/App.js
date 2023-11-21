@@ -21,10 +21,10 @@ const App = () => {
         <Grid item lg={10} md={9}>
           <Switch>
           <Route exact path="/" component={AboutMe} />
-            <Route path="/AboutMe" component={AboutMe}/>
-            <Route path="/resume" component={Resume}/>
-            <Route path="/projects" component={Project}/>
-            <Route path="/contact" component={Contact}/>
+            <Route exact path="/AboutMe" component={AboutMe}/>
+            <Route exact path="/resume" component={Resume}/>
+            <Route exact path="/projects" component={Project}/>
+            <Route exact path="/contact" component={Contact}/>
           </Switch>
         </Grid>
       </Grid>     
