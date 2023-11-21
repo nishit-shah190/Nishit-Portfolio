@@ -13,9 +13,8 @@ const App = () => {
   
   return (
    <div>
-    <CssBaseline/> 
     <Router>
-      <Grid container spacing={1} style={{  background : '#151414' , minHeight: '100vh' }}>
+      <Grid container spacing={1} style={{  background : '#151414' , minHeight: '140vh' }}>
         <Grid item lg={2} md={3}>
           <SideBar/>
         </Grid>

@@ -14,13 +14,15 @@ export default makeStyles((theme) => ({
       marginTop:'30px',
       height:480,
       backgroundColor:'#212121',
-      position:'relative'
+      position:'relative',
+      boxShadow: '0 0 10px rgba(255, 255, 255, 0.5)'
     },
     media: {
       height: 200,
     },
-    content:{
-      color:'white'
+    cardcontent:{
+      color:'white',
+
     },
     techbutton:{
       color:'#c3eafd',

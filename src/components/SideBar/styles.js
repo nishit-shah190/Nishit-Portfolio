@@ -19,7 +19,6 @@ export default makeStyles((theme) => ({
     },
     color:'#c3eafd'
   },
-  // necessary for content to be below app bar
   toolbar: theme.mixins.toolbar,
   toolbar:{
     margin:'auto',
@@ -58,10 +57,9 @@ export default makeStyles((theme) => ({
     },
   },
   drawerPaper: {
-    // marginTop:'80px',
     width: drawerWidth,
-    // height:'350px',
-    background:'black'
+    background:'black',
+    boxShadow: '0 0 10px rgba(255, 255, 255, 0.5)'
   },
   sidebarimage:{
     marginTop:'25px',

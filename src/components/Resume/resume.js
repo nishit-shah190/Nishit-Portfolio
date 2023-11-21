@@ -18,7 +18,7 @@ const Resume = () => {
           Resume
       </Typography>
       <Button className={classes.downloadButton} variant="contained" size="large" onClick={downloadResume}>
-      `<div className={classes.buttonContent}>
+      <div className={classes.buttonContent}>
         <OpenInNewIcon className={classes.icon} />
           Open Resume
       </div>

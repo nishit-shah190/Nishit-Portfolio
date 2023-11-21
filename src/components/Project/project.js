@@ -26,10 +26,10 @@ const Project = () => {
         title=""
       />
       <CardContent >
-        <Typography gutterBottom variant="h4" component="h2" className={classes.content}>
+        <Typography gutterBottom variant="h4" component="h2" className={classes.cardcontent}>
           {detail.title}
         </Typography>
-        <Typography variant="body1" color="textSecondary" component="p" className={classes.content}>
+        <Typography variant="body1" color="textSecondary" component="p" className={classes.cardcontent}>
           {detail.description}
         </Typography>
         <div className={classes.techContainer}>
