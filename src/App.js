@@ -2,7 +2,7 @@ import React from 'react';
 import useStyles from './styles'
 import SideBar from './components/SideBar/Sidebar';
 import { CssBaseline, Divider, Grid, Typography } from '@material-ui/core';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import AboutMe from './components/AboutMe/AboutMe';
 import Project from './components/Project/project';
 import Contact from './components/Contact/contact';
@@ -19,13 +19,15 @@ const App = () => {
           <SideBar/>
         </Grid>
         <Grid item lg={10} md={9}>
+          <Router>
           <Switch>
           <Route exact path="/" component={AboutMe} />
-            <Route exact path="/AboutMe" component={AboutMe}/>
-            <Route exact path="/resume" component={Resume}/>
-            <Route exact path="/projects" component={Project}/>
-            <Route exact path="/contact" component={Contact}/>
+            <Route  path="/AboutMe" component={AboutMe}/>
+            <Route  path="/resume" component={Resume}/>
+            <Route  path="/projects" component={Project}/>
+            <Route  path="/contact" component={Contact}/>
           </Switch>
+          </Router>
         </Grid>
       </Grid>     
       </Router>
