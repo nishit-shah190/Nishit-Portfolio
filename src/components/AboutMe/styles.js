@@ -8,7 +8,8 @@ export default makeStyles((theme) => ({
     },
     body1:{
         fontFamily: 'Domine',
-        color:'#fafafa'
+        color:'#fafafa',
+        textAlign:'justify'
     },
     content:{
         textAlign:'left',
