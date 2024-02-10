@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Nishit-Portfolio/static/css/main.fb532045.css",
-    "main.js": "/Nishit-Portfolio/static/js/main.96a6b387.js",
+    "main.js": "/Nishit-Portfolio/static/js/main.6b5d18e2.js",
     "static/media/Screenshot 2023-09-02 at 11.04.38 PM.png": "/Nishit-Portfolio/static/media/Screenshot 2023-09-02 at 11.04.38 PM.730bceec82bebf182730.png",
     "index.html": "/Nishit-Portfolio/index.html",
     "main.fb532045.css.map": "/Nishit-Portfolio/static/css/main.fb532045.css.map",
-    "main.96a6b387.js.map": "/Nishit-Portfolio/static/js/main.96a6b387.js.map"
+    "main.6b5d18e2.js.map": "/Nishit-Portfolio/static/js/main.6b5d18e2.js.map"
   },
   "entrypoints": [
     "static/css/main.fb532045.css",
-    "static/js/main.96a6b387.js"
+    "static/js/main.6b5d18e2.js"
   ]
 }
