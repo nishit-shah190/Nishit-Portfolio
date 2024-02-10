@@ -6,7 +6,7 @@ import useStyles from './styles'
 const Resume = () => {
   const downloadResume = () => {
     const link = document.createElement('a');
-    link.href = 'https://github.com/nishit-shah190/Nishit-s-Resume/blob/main/Nishit_Shah_Resume_September.pdf';
+    link.href = 'https://github.com/nishit-shah190/Nishit-s-Resume/blob/main/Nishit_Shah_Resume_January.pdf';
     link.target = '_blank';
     link.click();
   }
